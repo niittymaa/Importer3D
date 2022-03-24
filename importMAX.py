@@ -10,10 +10,7 @@ from math        import degrees
 from struct      import Struct, unpack
 from BasicShapes import Shapes, ViewProviderShapes
 
-try:
-	import olefile
-except:
-	missingDependency("olefile")
+import olefile
 
 UNPACK_BOX_DATA = Struct('<hihhbff').unpack_from  # Index, int, short, short, byte, float, Length
 
